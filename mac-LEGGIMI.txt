@@ -1,0 +1,35 @@
+CW DECODER (DeepCW + HamNoise) per Mac (Apple Silicon)
+===================================================
+
+Installazione
+1. Trascina CW DECODER.app nella cartella Applicazioni.
+2. L'app non e' firmata con un certificato Apple (solo firma locale "ad hoc"),
+   quindi al primo avvio macOS la blocca. Due modi per sbloccarla:
+   a) Terminale:  xattr -dr com.apple.quarantine "/Applications/CW DECODER.app"
+   b) oppure: prova ad aprirla, poi Impostazioni di Sistema > Privacy e
+      sicurezza > "Apri comunque".
+3. Al primo avvio consenti l'accesso al microfono (serve per leggere
+   l'ingresso audio USB).
+
+Uso
+- Avvia, poi apri Impostazioni e scegli in "Ingresso" la scheda audio USB
+  della radio.
+- "Uscita ascolto": dove sentire l'audio (cuffie/altoparlanti).
+- Riduzione rumore (HamNoise):
+    Spenta             nessuna riduzione del rumore
+    Solo ascolto       pulisce solo l'audio che ascolti (predefinito)
+    Ascolto + decoder  manda l'audio pulito anche a waterfall e decoder
+- Lingua: Italiano o English, da Impostazioni > Aspetto oppure dal menu
+  Lingua. Al primo avvio segue la lingua del sistema.
+- A- / A+ cambiano la dimensione del testo, "Copia testo" lo mette negli
+  appunti, "Cancella" lo svuota. I nominativi sono evidenziati in ambra.
+- Il pulsante Impostazioni nasconde il pannello laterale.
+- Clic sul waterfall per spostare la banda di decodifica, rotella per la
+  regolazione fine.
+- Modalita' Pileup: decodifica piu' segnali insieme. Motore: WASM o WebGPU.
+
+Tutto gira in locale, senza rete.
+
+Crediti
+DeepCW   https://github.com/e04/web-deep-cw-decoder  (MIT, (c) 2026 e04)
+HamNoise https://github.com/e04/HamNoise             (MIT, (c) 2026 e04)
