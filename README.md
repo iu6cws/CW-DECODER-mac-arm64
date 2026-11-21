@@ -38,9 +38,13 @@ Built by IU6CWS (Damian), JN72ib.
 - Mac with Apple Silicon (arm64), recent macOS
 - An audio input carrying the receiver audio (e.g. the radio's built-in USB audio codec)
 
+## Download
+
+**[⬇ CW-DECODER-mac-arm64.zip](https://github.com/iu6cws/CW-DECODER-mac-arm64/raw/main/release/CW-DECODER-mac-arm64.zip)** (≈136 MB, macOS Apple Silicon)
+
 ## Installation
 
-1. Drag **`CW DECODER.app`** into the **Applications** folder.
+1. Unzip the archive and drag **`CW DECODER.app`** into the **Applications** folder.
 2. The app has only a local ("ad hoc") signature, not an Apple Developer certificate, so macOS blocks it on first launch. Unblock it in one of two ways:
    - in Terminal:
      ```bash
