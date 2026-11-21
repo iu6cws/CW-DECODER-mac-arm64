@@ -40,7 +40,7 @@ Built by IU6CWS (Damian), JN72ib.
 
 ## Download
 
-**[⬇ CW-DECODER-mac-arm64.zip](https://github.com/iu6cws/CW-DECODER-mac-arm64/raw/main/release/CW-DECODER-mac-arm64.zip)** (≈136 MB, macOS Apple Silicon)
+**[⬇ CW-DECODER-mac-arm64.zip](https://github.com/iu6cws/CW-DECODER-mac-arm64/releases/download/v1.2.1/CW-DECODER-mac-arm64.zip)** (≈130 MB, macOS Apple Silicon) – or see all [Releases](https://github.com/iu6cws/CW-DECODER-mac-arm64/releases)
 
 ## Installation
 
