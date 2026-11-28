@@ -3,11 +3,13 @@ CW DECODER (DeepCW + HamNoise) for Mac (Apple Silicon)
 
 Install
 1. Drag CW DECODER.app into the Applications folder.
-2. The app is not signed with an Apple certificate (local "ad hoc"
-   signature only), so macOS blocks it on first launch. Unblock it either:
-   a) in Terminal:  xattr -dr com.apple.quarantine "/Applications/CW DECODER.app"
-   b) or try to open it, then System Settings > Privacy & Security >
-      "Open Anyway".
+2. The app is not signed with an Apple certificate, so macOS says it is
+   "damaged" and refuses to open it. In Terminal, remove the quarantine
+   flag and give it a local ("ad hoc") signature:
+     xattr -cr "/Applications/CW DECODER.app"
+     codesign --force --deep -s - "/Applications/CW DECODER.app"
+   If macOS still blocks it: right-click > Open > Open, or System
+   Settings > Privacy & Security > "Open Anyway".
 3. On first launch allow microphone access (needed to read the USB audio
    input).
 
@@ -24,7 +26,10 @@ Use
 - A- / A+ change the text size, "Copy text" puts it on the clipboard,
   "Clear" empties it. Callsigns are highlighted in amber.
 - The Settings button hides the side panel.
-- Click the waterfall to move the decoding passband, scroll to fine-tune.
+- Automatic tuning (AFC, on by default): finds the CW signal, narrows the
+  passband onto it (150 Hz) and follows it. Turn it off in Settings >
+  Decoder.
+- Click the waterfall to switch to another station, scroll to fine-tune.
 - Pileup mode decodes several signals at once. Engine: WASM or WebGPU.
 
 Everything runs locally, with no network.
